@@ -1,6 +1,6 @@
 import { IoMailSharp } from "react-icons/io5";
-import Reveal from "../Reveal/Reveal";
 import { LuChevronUp } from "react-icons/lu";
+import Reveal from "../Reveal/Reveal";
 
 const Contact = ({ isPolish }) => {
   return (

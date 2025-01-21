@@ -1,8 +1,13 @@
+import { MdOutlineArrowRightAlt } from "react-icons/md";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import Reveal from "../Reveal/Reveal";
 import Links from "../Links/Links";
-import { MdOutlineArrowRightAlt } from "react-icons/md";
 import Technologies from "./Technologies";
+
+
+
+
+
 
 const About = ({ isPolish }) => {
   return (

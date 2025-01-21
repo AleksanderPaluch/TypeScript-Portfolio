@@ -1,11 +1,12 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
-import Reveal from "../Reveal/Reveal";
 import { ImNewTab } from "react-icons/im";
 import { FaGithub } from "react-icons/fa";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import Reveal from "../Reveal/Reveal";
 import ProjectModal from "./ProjectModal";
+
 
 const Project = ({
   isPolish,

@@ -1,6 +1,7 @@
 import { ImNewTab } from "react-icons/im";
-import Reveal from "../Reveal/Reveal";
 import SectionHeader from "../SectionHeader/SectionHeader";
+import Reveal from "../Reveal/Reveal";
+
 
 const Education = ({isPolish}) => {
   return (

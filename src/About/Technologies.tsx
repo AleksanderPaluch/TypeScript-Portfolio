@@ -2,6 +2,7 @@ import { FaCode } from "react-icons/fa";
 import { TbMoodSearch } from "react-icons/tb";
 import Reveal from "../Reveal/Reveal";
 
+
 const Chip = ({ children }) => {
   return (
     <span className="rounded bg-neutral px-4 py-1 text-sm font-semibold text-white">

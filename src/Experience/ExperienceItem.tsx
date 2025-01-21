@@ -1,5 +1,6 @@
 import Reveal from "../Reveal/Reveal";
 
+
 const ExperienceItem = ({
   isPolish,
   company,

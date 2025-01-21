@@ -1,6 +1,7 @@
 import SectionHeader from "../SectionHeader/SectionHeader";
 import Project from "./Project";
 
+
 const projects = [
   {
     title: "AquaTrack",

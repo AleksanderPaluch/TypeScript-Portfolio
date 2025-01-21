@@ -1,5 +1,6 @@
 import Reveal from "../Reveal/Reveal";
 
+
 const Hero = ({ isPolish }) => {
   return (
     <section id="hero" className="section-wrapper">

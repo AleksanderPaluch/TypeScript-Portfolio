@@ -1,5 +1,6 @@
-import ThemeBtn from "../ThemeBtn/ThemeBtn";
 import Links from "../Links/Links";
+import ThemeBtn from "../ThemeBtn/ThemeBtn";
+
 
 const Header = ({ setIsPolish, isPolish }) => {
   return (

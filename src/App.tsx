@@ -1,13 +1,14 @@
 import { useState } from "react";
-import About from "./About/About";
-import "./App.css";
-import Contact from "./Contact/Contact";
-import Education from "./Education/Education";
-import Experience from "./Experience/Experience";
-import Header from "./Header/Header";
-import Hero from "./Hero/Hero";
-import Projects from "./Projects/Projects";
-import  SideBar  from "./SideBar/SideBar";
+
+import Education from "./Education/Education.js";
+import About from "./About/About.js";
+import Contact from "./Contact/Contact.js";
+import Experience from "./Experience/Experience.js";
+import Header from "./Header/Header.js";
+import Hero from "./Hero/Hero.js";
+import Projects from "./Projects/Projects.js";
+import SideBar from "./SideBar/SideBar.js";
+
 
 function App() {
 
