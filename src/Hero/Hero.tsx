@@ -1,5 +1,5 @@
 import Reveal from "../Reveal/Reveal";
-
+import React from "react";
 
 const Hero = ({ isPolish }) => {
   return (

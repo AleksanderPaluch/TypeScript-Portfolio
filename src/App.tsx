@@ -8,6 +8,8 @@ import Hero from "./Hero/Hero";
 import Projects from "./Projects/Projects";
 import SideBar from "./SideBar/SideBar";
 
+import Squares from "./Squares";
+
 const App: React.FC = (): JSX.Element => {
   const [isPolish, setIsPolish] = useState<boolean>(false);
 
@@ -16,8 +18,16 @@ const App: React.FC = (): JSX.Element => {
       <div className="grid grid-cols-[34px_1fr] md:grid-cols-[54px_1fr]">
         <SideBar isPolish={isPolish} />
         <main>
+        <Squares
+              speed={0.2}
+              squareSize={40}
+              direction="diagonal" // up, down, left, right, diagonal
+              borderColor="grey"
+              hoverFillColor="#fff"
+            ></Squares>
           <Header setIsPolish={setIsPolish} isPolish={isPolish} />
           <div className="mx-auto max-w-5xl space-y-32 px-4 pb-24 md:px-8">
+            
             <Hero isPolish={isPolish} />
             <About isPolish={isPolish} />
             <Education isPolish={isPolish} />
