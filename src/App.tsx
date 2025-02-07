@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Education from "./Education/Education";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
@@ -8,7 +8,7 @@ import Hero from "./Hero/Hero";
 import Projects from "./Projects/Projects";
 import SideBar from "./SideBar/SideBar";
 
-const App: React.FC = () => {
+const App: React.FC = (): JSX.Element => {
   const [isPolish, setIsPolish] = useState<boolean>(false);
 
   return (
