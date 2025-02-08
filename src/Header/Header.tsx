@@ -4,7 +4,7 @@ import ThemeBtn from "../ThemeBtn/ThemeBtn";
 
 const Header = ({ setIsPolish, isPolish }) => {
   return (
-    <div className="bg-base fixed top-0 z-20 flex w-[90%] items-center justify-between px-4 py-2 backdrop-blur md:w-[94%] lg:w-[97%]">
+    <div className="bg-base fixed top-0 z-20 flex w-[90%] items-center justify-between px-4 py-2 backdrop-blur-3xl md:w-[94%] lg:w-[97%]">
       <div>
         <Links />
       </div>

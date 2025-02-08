@@ -12,6 +12,7 @@ import Technologies from "./Technologies";
 const About = ({ isPolish }) => {
   return (
     <section id="about" className="section-wrapper">
+          
       <SectionHeader title={isPolish ? "O mnie" : "About"} side="left" />
       <div className="prose grid grid-cols-1 gap-8 prose-p:my-2 md:grid-cols-[1fr_300px]">
         <div className="">
@@ -21,8 +22,8 @@ const About = ({ isPolish }) => {
                 {isPolish ? "Hej" : "Hey!"}
               </span>
               {isPolish
-                ? "Jestem Alex, jestem szefem sushi, który zmienił ścieżkę kariery na frontend developera. Mieszkam w Warszawie i specjalizuję się w tworzeniu intuicyjnych oraz estetycznych stron, głównie z wykorzystaniem Reacta, ale zawsze z entuzjazmem odkrywam najlepsze narzędzia do realizacji danego zadania."
-                : "I'm Alex, a chef turned frontend developer. Based in Warsaw, I specialize in building easy-to-use and aesthetically pleasinguser interfaces, primarily using React, but I'm always excited to explore the best tools for the job."}
+                ? "Jestem Alex, jestem szefem sushi, który zmienił ścieżkę kariery na Full Stack developera. Mieszkam w Warszawie i specjalizuję się w tworzeniu intuicyjnych oraz estetycznych stron, głównie z wykorzystaniem Reacta, ale zawsze z entuzjazmem odkrywam najlepsze narzędzia do realizacji danego zadania."
+                : "I'm Alex, a chef turned Full Stack developer. Based in Warsaw, I specialize in building easy-to-use and aesthetically pleasinguser interfaces, primarily using React, but I'm always excited to explore the best tools for the job."}
             </p>
           </Reveal>
           <Reveal>

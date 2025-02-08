@@ -15,16 +15,18 @@ const App: React.FC = (): JSX.Element => {
 
   return (
     <>
-      <div className="grid grid-cols-[34px_1fr] md:grid-cols-[54px_1fr]">
-        <SideBar isPolish={isPolish} />
-        <main>
-        <Squares
+      <Squares
               speed={0.3}
               squareSize={40}
               direction="diagonal" // up, down, left, right, diagonal
               borderColor="00000"
-              hoverFillColor="00000"
-            ></Squares>
+              hoverFillColor="#222"
+            />
+ 
+      <div className="grid grid-cols-[34px_1fr] md:grid-cols-[54px_1fr]">
+        <SideBar isPolish={isPolish} />
+        <main>
+      
           <Header setIsPolish={setIsPolish} isPolish={isPolish} />
           <div className="mx-auto max-w-5xl space-y-32 px-4 pb-24 md:px-8">
             

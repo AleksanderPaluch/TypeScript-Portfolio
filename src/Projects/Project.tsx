@@ -45,7 +45,7 @@ const Project = ({
         transition={{ duration: 1 }}
       >
         <div
-          className="relative aspect-video w-full cursor-pointer overflow-hidden rounded-xl bg-neutral"
+          className="relative aspect-video w-full cursor-pointer overflow-hidden rounded-xl bg-base-300"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onClick={() => setIsOpen(true)}
@@ -54,10 +54,10 @@ const Project = ({
             src={imgSrc}
             alt={`An image of the ${title} project.`}
             style={{
-              width: isHovered ? "90%" : " 85%",
-              rotate: isHovered ? "6deg" : "-2deg",
+              width: isHovered ? "90%" : " 87%",
+              rotate: isHovered ? "2deg" : "-1deg",
             }}
-            className="absolute bottom-0 left-1/2 w-[85%] -translate-x-1/2 translate-y-[20%] rounded-sm transition-all"
+            className="absolute bottom-0 left-1/2 w-[85%] -translate-x-1/2 translate-y-[7%] rounded-sm transition-all"
           />
         </div>
         <div className="mt-4 flex flex-col gap-2">
