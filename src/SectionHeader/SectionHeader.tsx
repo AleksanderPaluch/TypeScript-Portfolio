@@ -7,7 +7,7 @@ const SectionHeader = ({ title, side = "left" }) => {
       className="mb-12 flex h-20 items-center gap-8"
       style={{ flexDirection: side === "left" ? "row-reverse" : "row" }}
     >
-      <div className="h-[1px] w-full bg-neutral"></div>
+      <div className="h-[4px] z-50 w-full bg-neutral"></div>
 
       <h2 >
         <Reveal>

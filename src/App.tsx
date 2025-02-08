@@ -19,11 +19,11 @@ const App: React.FC = (): JSX.Element => {
         <SideBar isPolish={isPolish} />
         <main>
         <Squares
-              speed={0.2}
+              speed={0.3}
               squareSize={40}
               direction="diagonal" // up, down, left, right, diagonal
-              borderColor="grey"
-              hoverFillColor="#fff"
+              borderColor="00000"
+              hoverFillColor="00000"
             ></Squares>
           <Header setIsPolish={setIsPolish} isPolish={isPolish} />
           <div className="mx-auto max-w-5xl space-y-32 px-4 pb-24 md:px-8">
