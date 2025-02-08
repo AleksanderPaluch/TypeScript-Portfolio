@@ -13,21 +13,30 @@ import Squares from "./Squares";
 const App: React.FC = (): JSX.Element => {
   const [isPolish, setIsPolish] = useState<boolean>(false);
 
+  const [isTheme, setIsTheme] = useState("forest");
+
+  const toggleTheme = () => {
+    const newTheme = isTheme === "forest" ? "cmyk" : "forest";
+    setIsTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
+console.log(isTheme);
   return (
     <>
-      <Squares
+  {isTheme === "forest" ?  <Squares
               speed={0.3}
               squareSize={40}
               direction="diagonal" // up, down, left, right, diagonal
               borderColor="00000"
               hoverFillColor="#222"
-            />
+            /> : ""}
+     
  
       <div className="grid grid-cols-[34px_1fr] md:grid-cols-[54px_1fr]">
         <SideBar isPolish={isPolish} />
         <main>
       
-          <Header setIsPolish={setIsPolish} isPolish={isPolish} />
+          <Header setIsPolish={setIsPolish} isPolish={isPolish} isTheme={isTheme} toggleTheme={toggleTheme}/>
           <div className="mx-auto max-w-5xl space-y-32 px-4 pb-24 md:px-8">
             
             <Hero isPolish={isPolish} />

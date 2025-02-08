@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 
-const ThemeBtn = () => {
-  const [isTheme, setIsTheme] = useState("forest");
+const ThemeBtn = ({isTheme, toggleTheme}) => {
 
-  const toggleTheme = () => {
-    const newTheme = isTheme === "forest" ? "cmyk" : "forest";
-    setIsTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-  };
 
   return (
     <div className="pt-1 md:pt-2">
