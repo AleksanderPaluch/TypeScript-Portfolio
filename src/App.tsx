@@ -23,14 +23,17 @@ const App: React.FC = (): JSX.Element => {
 console.log(isTheme);
   return (
     <>
-  {isTheme === "forest" ?  <Squares
-              speed={0.3}
+  
+      <Squares
+           
+              speed={0.2}
               squareSize={40}
               direction="diagonal" // up, down, left, right, diagonal
-              borderColor="00000"
-              hoverFillColor="#222"
-            /> : ""}
-     
+              borderColor={isTheme === "forest" ? "00000" : "#c7c7c761"}
+              hoverFillColor={isTheme === "forest" ? "#15ba53" : "#45aeef"}
+              gradientColor={isTheme === "forest" ? "rgba(0, 0, 0, 0)" : "#c7c7c72f"}
+              gradientColor2={isTheme === "forest" ? "#060606" : "#c7c7c761"}
+            />
  
       <div className="grid grid-cols-[34px_1fr] md:grid-cols-[54px_1fr]">
         <SideBar isPolish={isPolish} />

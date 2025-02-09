@@ -1,12 +1,17 @@
 import { useRef, useEffect, useState } from 'react';
 
 const Squares = ({
+  gradientColor,
+  gradientColor2,
   direction = 'right',
   speed = 1,
   borderColor = '#999',
   squareSize = 40,
   hoverFillColor = '#222',
 }) => {
+
+
+
   const canvasRef = useRef(null);
   const requestRef = useRef(null);
   const numSquaresX = useRef();
@@ -61,8 +66,11 @@ const Squares = ({
         canvas.height / 2,
         Math.sqrt(Math.pow(canvas.width, 2) + Math.pow(canvas.height, 2)) / 2
       );
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0)');
-      gradient.addColorStop(1, '#060606');
+
+      
+
+      gradient.addColorStop(0, gradientColor);
+      gradient.addColorStop(1,  gradientColor2);
 
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
