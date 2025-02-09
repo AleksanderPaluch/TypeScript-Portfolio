@@ -7,8 +7,8 @@ import Header from "./Header/Header";
 import Hero from "./Hero/Hero";
 import Projects from "./Projects/Projects";
 import SideBar from "./SideBar/SideBar";
-
 import Squares from "./Squares";
+
 
 const App: React.FC = (): JSX.Element => {
   const [isPolish, setIsPolish] = useState<boolean>(false);
