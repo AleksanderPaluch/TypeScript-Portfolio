@@ -13,12 +13,14 @@ import Squares from "./Squares";
 const App: React.FC = (): JSX.Element => {
   const [isPolish, setIsPolish] = useState<boolean>(false);
 
-  const [isTheme, setIsTheme] = useState("forest");
+  const [isTheme, setIsTheme] = useState<"forest" | "cmyk">("forest");
 
-  const toggleTheme = () => {
-    const newTheme = isTheme === "forest" ? "cmyk" : "forest";
+  const toggleTheme = (): void => {
+    const newTheme: "forest" | "cmyk" = isTheme === "forest" ? "cmyk" : "forest";
     setIsTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
+    if (typeof document !== "undefined") {
+      document.documentElement.setAttribute("data-theme", newTheme);
+    }
   };
 console.log(isTheme);
   return (
