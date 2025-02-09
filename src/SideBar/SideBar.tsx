@@ -1,31 +1,39 @@
 import { motion } from "framer-motion";
 import SideBarLink from "./SideBarLink";
 import { useEffect, useState } from "react";
+import React from "react";
+import { iPolish } from "../types"; 
 
 
-const SideBar = ({isPolish}) => {
 
-  const [isSelected, setSelected] = useState("")
+
+const SideBar: React.FC<iPolish> = ({isPolish}) => {
+
+  const [isSelected, setSelected] = useState<string>("")
  
 
   useEffect(() => {
-    const sections = document.querySelectorAll(".section-wrapper")
-
-    const options = {trashhold: 0.1}
-
-
-    const callback = (entries) => {
+    const sections = document.querySelectorAll(".section-wrapper");
+  
+    const options = { threshold: 0.4 };
+  
+    const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
-        if(entry.isIntersecting) {
-          setSelected(entry.target.id)
-        } 
-      })
-    }
-
-    const observer = new IntersectionObserver (callback, options)
-
-    sections.forEach((section) => observer.observe(section))
-  })
+        if (entry.isIntersecting) {
+          setSelected(entry.target.id);
+        }
+      });
+    };
+  
+    const observer = new IntersectionObserver(callback, options);
+  
+    sections.forEach((section) => observer.observe(section));
+  
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+  
 
   return (
     <motion.nav
