@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
-const ThemeBtn = ({isTheme, toggleTheme}) => {
+
+interface iTheme {
+  isTheme: "forest" | "cmyk";
+  toggleTheme: () => void;
+}
+
+const ThemeBtn: React.FC<iTheme> = ({isTheme, toggleTheme}) => {
 
 
   return (
@@ -9,8 +15,9 @@ const ThemeBtn = ({isTheme, toggleTheme}) => {
         <input
           type="checkbox"
           className="theme-controller"
-          checked={isTheme === "cmyk"}
+          checked={isTheme !== "forest"} 
           onChange={toggleTheme}
+          aria-label="Toggle theme" 
         />
 
         <svg
