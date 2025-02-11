@@ -13,7 +13,7 @@ const SideBar: React.FC<iPolish> = ({isPolish}) => {
  
 
   useEffect(() => {
-    const sections = document.querySelectorAll(".section-wrapper");
+    const sections = document.querySelectorAll<HTMLElement>(".section-wrapper");
   
     const options = { threshold: 0.4 };
   
