@@ -22,7 +22,7 @@ const App: React.FC = (): JSX.Element => {
       document.documentElement.setAttribute("data-theme", newTheme);
     }
   };
-console.log(isTheme);
+
   return (
     <>
   
