@@ -3,7 +3,17 @@ import ThemeBtn from "../ThemeBtn/ThemeBtn";
 import React from "react"
 
 
-const Header = ({ setIsPolish, isPolish, isTheme, toggleTheme }) => {
+ interface iHeader {
+  isPolish: boolean;
+  setIsPolish: React.Dispatch<React.SetStateAction<boolean>>;
+  isTheme: "forest" | "cmyk";
+  toggleTheme: () => void;
+    
+  }
+
+
+
+const Header: React.FC<iHeader> = ({ setIsPolish, isPolish, isTheme, toggleTheme }) => {
   return (
     <div className="bg-base fixed top-0 z-20 flex w-[90%] items-center justify-between px-4 py-2 backdrop-blur-3xl md:w-[94%] lg:w-[97%]">
       <div>
@@ -18,13 +28,13 @@ const Header = ({ setIsPolish, isPolish, isTheme, toggleTheme }) => {
           {isPolish ? (
             <img
               className="w-6"
-              src="../../assets/Flag_of_the_United_Kingdom_(3-5).svg"
+              src="/assets/Flag_of_the_United_Kingdom_(3-5).svg"
               alt="English Flag"
             />
           ) : (
             <img
               className="w-6 border-[1px] border-zinc-700"
-              src="../../assets/Flag_of_Poland.svg"
+              src="/assets/Flag_of_Poland.svg"
               alt="Polish Flag"
             />
           )}
@@ -35,8 +45,8 @@ const Header = ({ setIsPolish, isPolish, isTheme, toggleTheme }) => {
           onClick={() =>
             window.open(
               isPolish
-                ? "../../assets/Paluch_FULLSTACK_CV.pdf"
-                : "../../assets/Palyukh_FULLSTACK_CV.pdf",
+                ? "/assets/Paluch_FULLSTACK_CV.pdf"
+                : "/assets/Palyukh_FULLSTACK_CV.pdf",
               "_blank"
             )
           }
