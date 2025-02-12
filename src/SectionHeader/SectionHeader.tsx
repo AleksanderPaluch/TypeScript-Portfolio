@@ -1,6 +1,12 @@
+import React from "react";
 import Reveal from "../Reveal/Reveal";
 
-const SectionHeader = ({ title, side = "left" }) => {
+interface iSectionHeader {
+  title: string;
+  side: "left" | "right"
+}
+
+const SectionHeader: React.FC<iSectionHeader> = ({ title, side = "left" }) => {
 
   return (
     <div

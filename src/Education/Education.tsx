@@ -1,9 +1,14 @@
+import React from "react";
 import { ImNewTab } from "react-icons/im";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import Reveal from "../Reveal/Reveal";
+import { iPolish } from "../types";
 
 
-const Education = ({isPolish}) => {
+const Education: React.FC<iPolish> = ({isPolish}) => {
+
+
+
   return (
     <section id="education" className="section-wrapper" >
       <SectionHeader title={isPolish ? "Edukacja" : "Education"}  side="right" />
