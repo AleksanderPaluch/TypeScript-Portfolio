@@ -1,8 +1,11 @@
 import { IoMailSharp } from "react-icons/io5";
 import { LuChevronUp } from "react-icons/lu";
 import Reveal from "../Reveal/Reveal";
+import React from "react";
+import { iPolish } from "../types";
 
-const Contact = ({ isPolish }) => {
+
+const Contact: React.FC<iPolish> = ({ isPolish }) => {
   return (
     <section id="contact" className="section-wrapper">
       <div className="relative flex justify-center py-20">
