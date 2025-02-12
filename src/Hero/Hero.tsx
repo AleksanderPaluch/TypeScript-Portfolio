@@ -1,7 +1,9 @@
 import Reveal from "../Reveal/Reveal";
 import React from "react";
+import { iPolish } from "../types";
 
-const Hero = ({ isPolish }) => {
+
+const Hero: React.FC<iPolish> = ({ isPolish }) => {
   return (
     <section id="hero" className="section-wrapper">
       <div className="min-h-[400px] overflow-hidden pb-36 pt-44 md:pb-0 md:pt-20 lg:pt-36">
