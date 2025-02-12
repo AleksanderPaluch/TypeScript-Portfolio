@@ -1,9 +1,17 @@
 import { FaCode } from "react-icons/fa";
 import { TbMoodSearch } from "react-icons/tb";
 import Reveal from "../Reveal/Reveal";
+import React from "react";
+import { iPolish } from "../types";
 
 
-const Chip = ({ children }) => {
+
+
+interface ChipProps {
+  children: React.ReactNode;
+}
+
+const Chip: React.FC<ChipProps> = ({ children }) => {
   return (
     <span className="rounded bg-neutral px-4 py-1 text-sm font-semibold text-white">
       {children}
@@ -11,7 +19,7 @@ const Chip = ({ children }) => {
   );
 };
 
-const Technologies = ({isPolish}) => {
+const Technologies: React.FC<iPolish> = ({isPolish}) => {
   return (
     <div className="relative">
       <div>

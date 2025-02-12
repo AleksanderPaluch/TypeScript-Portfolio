@@ -3,13 +3,15 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 import Reveal from "../Reveal/Reveal";
 import Links from "../Links/Links";
 import Technologies from "./Technologies";
+import React from "react";
+import { iPolish } from "../types";
 
 
 
 
 
 
-const About = ({ isPolish }) => {
+const About: React.FC<iPolish> = ({ isPolish }) => {
   return (
     <section id="about" className="section-wrapper">
           
