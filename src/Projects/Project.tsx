@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import { useRef } from "react";
 import { ImNewTab } from "react-icons/im";
 import { FaGithub } from "react-icons/fa";
-import { MdKeyboardArrowRight } from "react-icons/md";
 import Reveal from "../Reveal/Reveal";
 import ProjectModal from "./ProjectModal";
+import React from "react";
+import { iProject } from "../types";
 
-
-const Project = ({
+const Project: React.FC<iProject> = ({
   isPolish,
   modalContent,
   projectLink,
@@ -21,8 +21,8 @@ const Project = ({
   const ref = useRef();
   const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
-  const [isHovered, setIsHovered] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     if (isInView) {
@@ -86,27 +86,26 @@ const Project = ({
             </div>
           </Reveal>
           <Reveal>
-          <p className="w-full text-justify text-sm font-semibold text-primary">
-            {tech.join(" - ")}
-          </p>
+            <p className="w-full text-justify text-sm font-semibold text-primary">
+              {tech.join(" - ")}
+            </p>
           </Reveal>
-          
+
           <Reveal>
-          <p className="text-sm">
-            {description}{" "}
-            <span
-              onClick={() => setIsOpen(true)}
-              className="cursor-pointer text-primary font-semibold"
-            >
-              Learn More {">"}
-            </span>
-          </p>
+            <p className="text-sm">
+              {description}{" "}
+              <span
+                onClick={() => setIsOpen(true)}
+                className="cursor-pointer font-semibold text-primary"
+              >
+                Learn More {">"}
+              </span>
+            </p>
           </Reveal>
-        
         </div>
       </motion.div>
       <ProjectModal
-      isPolish={isPolish}
+        isPolish={isPolish}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         modalContent={modalContent}

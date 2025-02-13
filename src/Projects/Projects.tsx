@@ -1,5 +1,7 @@
 import SectionHeader from "../SectionHeader/SectionHeader";
+import { iPolish } from "../types";
 import Project from "./Project";
+import React from "react";
 
 
 const projects = [
@@ -193,7 +195,7 @@ const projects = [
   // },
 ];
 
-const Projects = ({ isPolish }) => {
+const Projects: React.FC<iPolish> = ({ isPolish }) => {
   return (
     <section id="projects" className="section-wrapper">
       <SectionHeader title={isPolish ? "Projekty" : "Projects"} side="left" />
@@ -204,13 +206,13 @@ const Projects = ({ isPolish }) => {
 
               key={project.title}
               isPolish={isPolish}
-              title={isPolish ? project.titlePl : project.title}
+              title={isPolish ? project.titlePl ?? "" : project.title ?? ""}
               imgSrc={project.imgSrc}
               code={project.code}
               projectLink={project.projectLink}
               tech={project.tech}
               description={
-                isPolish ? project.descriptionPl : project.description
+                isPolish ? project.descriptionPl ?? "" : project.description ?? ""
               }
               modalContent={
                 isPolish ? project.modalContentPl : project.modalContent

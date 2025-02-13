@@ -1,8 +1,10 @@
 import  { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { ImNewTab } from "react-icons/im";
+import React from "react";
+import { iProjectModal } from "../types";
 
-const ProjectModal = ({
+const ProjectModal: React.FC<iProjectModal> = ({
   isPolish,
   isOpen,
   setIsOpen,

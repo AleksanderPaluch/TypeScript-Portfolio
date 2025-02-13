@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import React from "react";
 
-
-const Links = () => {
+const Links: React.FC = () => {
   return (
     <div className="flex items-center text-xl lg:text-xl gap-4">
       <a
