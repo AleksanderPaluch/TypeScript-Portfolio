@@ -10,7 +10,7 @@ const SectionHeader: React.FC<iSectionHeader> = ({ title, side = "left" }) => {
 
   return (
     <div
-      className="mb-12 flex h-20 items-center gap-8"
+      className="mb-12 flex h-20 items-center gap-8 pt-20"
       style={{ flexDirection: side === "left" ? "row-reverse" : "row" }}
     >
       <div className="h-[1px] mt-4 lg:mt-10 z-50 w-full bg-neutral"></div>

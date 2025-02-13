@@ -1,10 +1,18 @@
 import Reveal from "../Reveal/Reveal";
+import React from "react";
 
+interface iExpItem {
+  isPolish: boolean;
+  company: string;
+  position: string;
+  time: string;
+  text: string;
+  description: React.ReactNode;
+}
 
-const ExperienceItem = ({
+const ExperienceItem: React.FC<iExpItem> = ({
   isPolish,
   company,
-  location,
   position,
   time,
   text,

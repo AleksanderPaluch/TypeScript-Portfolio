@@ -1,7 +1,8 @@
 import Reveal from "../Reveal/Reveal";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import ExperienceItem from "./ExperienceItem";
-
+import { iPolish } from "../types";
+import React from "react";
 
 const expirience = [
   {
@@ -168,7 +169,7 @@ const expirience = [
   },
 ];
 
-const Experience = ({ isPolish }) => {
+const Experience: React.FC<iPolish> = ({ isPolish }) => {
   return (
     <section id="experience" className="section-wrapper">
       <SectionHeader
@@ -184,7 +185,7 @@ const Experience = ({ isPolish }) => {
               company={item.company}
               time={item.time}
               position={isPolish ? item.positionPl : item.position}
-              text={isPolish ? item.textPl : item.text}
+              text={isPolish ? item.textPl ?? "" : item.text ?? ""}
               description={isPolish ? item.descriptionPl : item.description}
             />
           );
