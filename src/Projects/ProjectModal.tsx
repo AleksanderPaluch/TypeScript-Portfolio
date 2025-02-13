@@ -2,7 +2,7 @@ import  { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { ImNewTab } from "react-icons/im";
 import React from "react";
-import { iProjectModal } from "../types";
+import {  iProjectModal } from "../types";
 
 const ProjectModal: React.FC<iProjectModal> = ({
   isPolish,
@@ -17,17 +17,12 @@ const ProjectModal: React.FC<iProjectModal> = ({
 }) => {
 
   
-    useEffect(() => {
-        const body = document.querySelector("body");
-    
-        if (isOpen) {
-          body.style.overflowY = "hidden";
-        } else {
-          body.style.overflowY = "scroll";
-        }
-      }, [isOpen]);
+  useEffect(() => {
+    document.body.style.overflowY = isOpen ? "hidden" : "scroll";
+  }, [isOpen]);
+  
 
-
+   
 
   if (!isOpen) return <></>;
 

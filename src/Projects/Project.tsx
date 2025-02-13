@@ -18,7 +18,7 @@ const Project: React.FC<iProject> = ({
   code,
   tech,
 }) => {
-  const ref = useRef();
+  const ref = useRef<HTMLElement | null>(null);
   const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState<boolean>(false);
