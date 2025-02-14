@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-type SideBarLinkValue = "about" | "education" | "projects" | "experience" | "contact";
+
 
 interface ISideBarLink {
-  value: SideBarLinkValue;
+  value: string;
   href: string;
   children: React.ReactNode;
-  isSelected: SideBarLinkValue;
-  setSelected: React.Dispatch<React.SetStateAction<SideBarLinkValue>>;
+  isSelected: string;
+  setSelected: (value: string) => void;
 }
 
 const SideBarLink: React.FC<ISideBarLink> = ({ value, href, children, isSelected, setSelected }) => {
