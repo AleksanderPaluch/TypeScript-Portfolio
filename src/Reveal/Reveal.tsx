@@ -1,8 +1,14 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useAnimation, useInView, motion } from "framer-motion";
 
-export const Reveal = ({ children, width = "w-fit" }) => {
-  const ref = useRef(null);
+interface iReveal {
+  children: React.ReactNode;
+  width?: string;
+}
+
+
+export const Reveal: React.FC<iReveal> = ({ children, width = "w-fit" }) => {
+  const ref = useRef<HTMLDivElement  | null>(null);
   const isInView = useInView(ref, { once: true });
 
   const mainControls = useAnimation();
