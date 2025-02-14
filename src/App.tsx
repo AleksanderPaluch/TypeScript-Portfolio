@@ -10,6 +10,7 @@ import SideBar from "./SideBar/SideBar";
 import Squares from "./Squares";
 
 
+
 const App: React.FC = (): JSX.Element => {
   const [isPolish, setIsPolish] = useState<boolean>(false);
 
